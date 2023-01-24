@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ product_detail.title }}</title>
+</head>
+<body>
+
+
+<h1>description - {{ product_detail.description }}</h1>
+<img src="{{ product_detail.image }}"
+  width="255" height="255" >
+<h1>price - {{ product_detail.price }}</h1>
+<h1>rate - {{ product_detail.rate }}</h1>
+<h1>Reviews:</h1>
+{% for rew in review %}
+    <h1>{{ rew.text }}</h1>
+{% endfor %}
+<a href="/products"><button>Back</button></a>
+</body>
+</html>
